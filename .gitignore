@@ -1,5 +1,14 @@
 .DS_Store
 
+distilgpt2-wikitext103/checkpoint-1000/
+distilgpt2-wikitext103/checkpoint-2[0-9][0-9][0-9]/
+
+pretrained_distilgpt2-wikitext103/
+
+finetune_t5-small-SCOMP/
+
+wikitext_vocab.pkl
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

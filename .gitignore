@@ -1,7 +1,14 @@
 .DS_Store
 
 distilgpt2-wikitext103/checkpoint-1000/
-distilgpt2-wikitext103/checkpoint-[0-9]000/
+distilgpt2-wikitext103/checkpoint-2000/
+distilgpt2-wikitext103/checkpoint-3000/ 
+distilgpt2-wikitext103/checkpoint-4000/ 
+distilgpt2-wikitext103/checkpoint-5000/ 
+distilgpt2-wikitext103/checkpoint-6000/ 
+distilgpt2-wikitext103/checkpoint-7000/ 
+distilgpt2-wikitext103/checkpoint-8000/ 
+distilgpt2-wikitext103/checkpoint-9000/
 
 pretrained_distilgpt2-wikitext103/
 

@@ -1,33 +1,54 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/A17Y3Zfo)
-<div style="padding:15px 20px 20px 20px;border-left:3px solid green;background-color:#e4fae4;border-radius: 20px;color:#424242;">
+![Project Status](https://img.shields.io/badge/Project-Completed-brightgreen)
 
-## Welcome to the **1st assignment** for the **CS-552: Modern NLP course**!
+<div style="padding:15px 20px 20px 20px;border-left:3px solid blue;background-color:#e4f0fa;border-radius: 20px;color:#424242;">
 
-In the first two parts of this assignment, you need to construct a dataset and use it to train language models (LSTM and Transformer);
+## **NLP Language Modeling & Text Simplification**
 
-In the third part, you will finetune language models (RNN-based and Transformer-based Encoder-Decoder) on a text simplification task.
+This project applies advanced NLP techniques to train and fine-tune language models using the wikitext-103 dataset from Wikipedia. It encompasses data preprocessing, model training, and fine-tuning for text simplification tasks.
 
+### **Project Overview**
+- **Data Preprocessing:** Development and cleaning of a custom dataset, including vocabulary building and PyTorch dataset creation.
+- **Model Training:** Implementation and training of various LSTM and Transformer models.
+- **Model Fine-tuning:** Fine-tuning models for text simplification tasks.
 
-### **Tasks**
-- **[PART 1: Data Preprocessing](#1)**
-    - [1.1 Data Cleaning](#11)
-    - [1.2 Build Vocabulary](#12)
-    - [1.2 Get PyTorch Dataset](#13)
-- **[PART 2: Training Language Models](#2)**
-    - [2.1 Vanilla LSTM](#21)
-    - [2.2 Transformer (DistilGPT2)](#22)
-- **[PART 3: Finetuning Language Models](#3)**
-    - [3.1 Encoder-Decoder Model](#31)
-    - [3.2 Transformer (T5)](#32)
+### **Data and Models**
 
+- **Dataset:** Utilized the [wikitext-103 dataset](https://huggingface.co/datasets/wikitext), a large collection of high-quality Wikipedia articles.
 
-### **Deliverables**
-- ✅ This Jupyter notebook
-- ✅ `data.py`, `modeling.py` file
-- ✅ Checkpoints for two LSTM-variant and DistilGPT2 language models (Part 2)
-- ✅ Checkpoints for finetuned encoder-decoder and T5 language models (Part 3)
-- ✅ `./tensorboard` directory with logs for all trained/finetuned models
+- **Model Variants:**
+  - **LSTM with Token Embeddings Trained from Scratch:** An LSTM model with a trainable token embedding layer initialized randomly and trained alongside the language model.
+  - **LSTM with Pre-trained GloVe Embeddings:** An LSTM model using pre-trained GloVe embeddings, which remain frozen during training.
+  - **Transformer (DistilGPT2-based):** A Transformer model trained from scratch, following the architecture of DistilGPT2.
 
-Large files such as model checkpoints and logs should be pushed to the repository with Git LFS. You may also find that training the models on a GPU can speed up the process, we recommend using Colab's free GPU service for this. A tutorial on how to use Git LFS and Colab can be found [here](https://github.com/epfl-nlp/cs-552-modern-nlp/blob/main/Exercises/tutorials.md).
+### **Fine-tuning Tasks**
+
+- **Custom Encoder-Decoder Model:** Fine-tuned on the text simplification task, which involves compressing text to extract the most important information.
+- **Pretrained T5 Model:** Fine-tuned on the same text simplification task, leveraging a pretrained encoder-decoder model.
+
+### **Technical Details**
+- Implemented models using Python with libraries such as PyTorch and Hugging Face Transformers.
+- Utilized Git LFS for managing large files and model checkpoints.
+- Employed GPU acceleration through Colab for efficient training.
+
+### **Codebase File Structure**
+
+```txt
+.
+├── distilgpt2-wikitext103
+│   ├── ...
+├── docs
+    ├── ...
+├── models
+    ├── ...
+├── tensorboard
+    ├── ...
+├── README.md
+├── data.py
+├── modeling.py
+├── requirements.txt
+├── test_A1.py
+├── train.ipynb (main notebook)
+└── utils.py
+```
 
 </div>
